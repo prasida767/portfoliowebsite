@@ -1,0 +1,63 @@
+/* General styles for the About section */
+#about {
+    padding: 120px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #1c1c1c, #333);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: center; /* Center align text for better visual appeal */
+    height: 500px;
+}
+
+/* Wrapper for the animated texts */
+.text-wrapper {
+    position: relative;
+    height: 150px; /* Adjusted height to fit the text */
+    margin-bottom: 40px;
+}
+
+.intro-text, .name-text {
+    margin: 0;
+    font-size: 4em; /* Adjusted size for better visual balance */
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: fadeInOut 12s ease-in-out infinite; /* Animation for both texts */
+}
+
+/* Define specific timing for each text */
+.intro-text {
+    animation: fadeInOut 12s ease-in-out infinite;
+}
+
+.name-text {
+    animation: fadeInOut 12s ease-in-out infinite;
+    animation-delay: 6s; /* Starts after intro-text */
+}
+
+/* Animation Keyframes */
+@keyframes fadeInOut {
+    0%, 25% {
+        opacity: 0;
+    }
+    30%, 70% {
+        opacity: 1;
+    }
+    75%, 100% {
+        opacity: 0;
+    }
+}
+
+#about p {
+    font-size: 1.5em; /* Adjusted font size for better readability */
+    margin: 20px auto;
+    max-width: 1800px;
+    line-height: 1.6;
+    color: #eee;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    font-family: "Courier New";
+}

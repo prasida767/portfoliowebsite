@@ -1,0 +1,111 @@
+/* Importing fancy fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+#experience {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f9f9f9, #e0e0e0); /* Gradient background */
+    padding: 40px;
+    border-radius: 12px; /* Rounded corners for section */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Deeper shadow for the section */
+    animation: fadeIn 2s ease-in-out; /* Animation for the whole section */
+}
+
+h2 {
+    font-size: 3.5em;
+    margin-bottom: 40px;
+    color: #333; /* Dark gray for better readability */
+    font-family: 'Playfair Display', serif; /* Fancy font for heading */
+    text-align: center; /* Centered heading */
+    position: relative; /* For pseudo-element positioning */
+    animation: slideIn 1.5s ease-in-out; /* Animation for heading */
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: #007BFF; /* Blue underline */
+    border-radius: 2px;
+}
+
+.experience-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff; /* White background for items */
+    border-radius: 12px; /* Rounded corners for items */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for items */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    position: relative; /* For pseudo-element positioning */
+}
+
+.experience-item:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+    background-color: #f0f8ff; /* Light blue background on hover */
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 100%;
+    background: linear-gradient(to bottom, #007BFF, #00BFFF); /* Blue gradient left border */
+    border-radius: 12px 0 0 12px; /* Rounded corners on the left */
+}
+
+.experience-item h3 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    color: #222; /* Slightly darker gray for better contrast */
+    border-bottom: 3px solid #007BFF; /* Blue border for emphasis */
+    padding-bottom: 10px;
+    font-family: 'Playfair Display', serif; /* Fancy font */
+    animation: fadeIn 1.5s ease-in-out; /* Animation for headings */
+}
+
+.position {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #444; /* Dark gray for text */
+    font-size: 1.1em; /* Slightly larger font size for readability */
+}
+
+.position span {
+    font-size: 1.5em; /* Adjusted font size for balance */
+}
+
+.date {
+    color: #666; /* Medium gray for date */
+    font-size: 1em; /* Match the font size with the position */
+    font-style: italic; /* Italicize date for differentiation */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

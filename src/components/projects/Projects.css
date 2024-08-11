@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+#projects {
+    padding: 80px;
+    text-align: center;
+    background-color: black; /* Dark background for contrast */
+    color: white; /* White text for readability */
+}
+
+.projectHeading {
+    font-size: 3em;
+    font-family: "Century Schoolbook";
+    color: white;
+    margin-bottom: 40px;
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to the next line if needed */
+    justify-content: center; /* Center the items horizontally */
+    gap: 20px; /* Space between items */
+}
+
+.project {
+    background: linear-gradient(145deg, #f3f3f3, #f6e9e9); /* Gradient background */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    border: 2px solid #ddd; /* Light border for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    width: 400px; /* Fixed width to ensure uniform boxes */
+    height: 250px; /* Fixed height for consistency */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.project:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.project h3 {
+    margin: 0;
+    font-size: 2em;
+    color: #333; /* Darker text for contrast */
+    text-align: center; /* Center align text */
+    font-family: cursive;
+}
+
+.project p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #3a3737; /* Lighter gray for description */
+    text-align: center; /* Center align text */
+    font-family: "Courier New";
+    color: #9d2121;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

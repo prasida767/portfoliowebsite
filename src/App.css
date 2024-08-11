@@ -1,0 +1,61 @@
+/* Ensure the App component takes the full height of the viewport */
+.App {
+  text-align: center;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  background-color: #000; /* Black background color */
+  color: white;
+}
+
+/* Logo styles */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Link styles */
+.App-link {
+  color: #61dafb;
+}
+
+/* Keyframes for logo spin animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 2vmin);
+    padding: 10px;
+  }
+
+  .App-logo {
+    height: 30vmin;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    font-size: calc(6px + 2vmin);
+    padding: 5px;
+  }
+
+  .App-logo {
+    height: 20vmin;
+  }
+}

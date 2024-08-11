@@ -1,0 +1,57 @@
+/* Importing Font Awesome for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+#contact {
+    font-family: 'Roboto', sans-serif;
+    background-color: black; /* Light background */
+    padding: 40px;
+    text-align: center; /* Center align the content */
+}
+
+.contact-heading {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Playfair Display', serif; /* Elegant font for heading */
+    animation: fadeIn 2s ease-in-out; /* Animation */
+}
+
+p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    color: #555; /* Darker gray for text */
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Space between items */
+}
+
+.contact-link {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #acbac9; /* Blue color for links */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.contact-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly enlarge the link */
+}
+
+.contact-link i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

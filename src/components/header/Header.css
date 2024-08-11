@@ -1,0 +1,105 @@
+/* Import a beautiful font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* General styles for the header */
+.App-header {
+    background: linear-gradient(135deg, #333, #000); /* Gradient background for depth */
+    padding: 20px 0; /* Increased padding for a more spacious look */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+    position: relative; /* For pseudo-element positioning */
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.App-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #61dafb, #00bcd4); /* Animated gradient underline */
+    animation: gradientMove 3s linear infinite; /* Animated gradient effect */
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Center items vertically */
+    padding: 20px 40px; /* Adjust padding for better spacing */
+}
+
+.navbar-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px; /* Increased gap for more spacing */
+}
+
+.navbar-item {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6em; /* Slightly larger font size */
+    position: relative; /* For pseudo-element positioning */
+    padding: 10px 15px; /* Padding for better click area */
+}
+
+.navbar-item a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and transform transitions */
+}
+
+.navbar-item a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #61dafb; /* Light blue underline */
+    transition: width 0.3s ease; /* Smooth underline animation */
+}
+
+.navbar-item a:hover::after {
+    width: 100%; /* Expands underline on hover */
+}
+
+.navbar-item a:hover {
+    color: #61dafb; /* Light blue color on hover */
+    transform: scale(1.1); /* Slightly zoom in on hover */
+}
+
+/* Keyframes for animated gradient underline */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+/* Style for the download button */
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007BFF;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.download-button:active {
+    background-color: #004494;
+    transform: translateY(0);
+}
